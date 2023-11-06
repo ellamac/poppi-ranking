@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/poppi-ranking/static/css/main.b6d04eb3.css",
-    "main.js": "/poppi-ranking/static/js/main.a74c0134.js",
+    "main.js": "/poppi-ranking/static/js/main.fdd13e73.js",
     "index.html": "/poppi-ranking/index.html",
     "main.b6d04eb3.css.map": "/poppi-ranking/static/css/main.b6d04eb3.css.map",
-    "main.a74c0134.js.map": "/poppi-ranking/static/js/main.a74c0134.js.map"
+    "main.fdd13e73.js.map": "/poppi-ranking/static/js/main.fdd13e73.js.map"
   },
   "entrypoints": [
     "static/css/main.b6d04eb3.css",
-    "static/js/main.a74c0134.js"
+    "static/js/main.fdd13e73.js"
   ]
 }
