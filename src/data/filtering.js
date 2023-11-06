@@ -18,12 +18,6 @@ export const weeklyTracks = (initialTracks, startingFriday) => {
   const prevWeek = initialTracks.filter(
     (track) =>
       track.rankings?.filter((ranking) => {
-        console.log(
-          'prevweek',
-          ranking.date,
-          lastWeek(startingFriday),
-          ranking.date === lastWeek(startingFriday)
-        );
         return ranking.date === lastWeek(startingFriday);
       }).length > 0
   );
@@ -44,7 +38,7 @@ export const weeklyTracks = (initialTracks, startingFriday) => {
 
   /* all tracks that qualify */
   const all = [newTracks, top3].flat();
-  console.log('filter all', initialTracks, startingFriday, all);
+
   return all;
 };
 
