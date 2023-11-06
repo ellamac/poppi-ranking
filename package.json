@@ -1,7 +1,6 @@
 {
   "name": "poppii",
   "version": "0.1.0",
-  "homepage": "https://ellamac.github.io/poppi-ranking",
   "private": true,
   "dependencies": {
     "@hello-pangea/dnd": "^16.3.0",

@@ -54,7 +54,7 @@ const App = (props) => {
     createRoutesFromElements([
       <Route
         id='root'
-        path='/poppi-ranking'
+        path='/'
         element={<Layout />}
         loader={() => tracks || null}
       >
