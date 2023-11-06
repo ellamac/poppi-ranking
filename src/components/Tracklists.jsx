@@ -12,7 +12,9 @@ const Tracklists = (props) => {
           .sort((a, b) => new Date(a) - new Date(b))
           .map((date) => (
             <li>
-              <NavLink to={`/vote/${date}`}>Äänestä {date} julkaistuja</NavLink>
+              <NavLink to={`/poppi-ranking/vote/${date}`}>
+                Äänestä {date} julkaistuja
+              </NavLink>
             </li>
           ))}
       </ul>

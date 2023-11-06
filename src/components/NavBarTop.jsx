@@ -18,7 +18,7 @@ const NavBarTop = (props) => {
         className={({ isActive, isPending }) =>
           navlinkClass(isActive, isPending)
         }
-        to={`/vote`}
+        to={`/poppi-ranking/vote`}
       >
         Äänestä
       </NavLink>
@@ -26,7 +26,7 @@ const NavBarTop = (props) => {
         className={({ isActive, isPending }) =>
           navlinkClass(isActive, isPending)
         }
-        to='/'
+        to='/poppi-ranking'
       >
         kotiin
       </NavLink>

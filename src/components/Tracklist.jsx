@@ -51,7 +51,7 @@ const Tracklist = (props) => {
       <section className='tracks'>
         {tracks.map((tr, i) => (
           <Track key={`track-${i}`} order={i + 1} track={tr}>
-            <NavLink to={`/vote/${tr.date}`}>?</NavLink>
+            <NavLink to={`/poppi-ranking/vote/${tr.date}`}>?</NavLink>
           </Track>
         ))}
       </section>

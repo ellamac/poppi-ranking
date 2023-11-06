@@ -20,7 +20,11 @@ const Track = ({ children, track, order }) => {
             <p className='artist'>
               {track.artist.split(',').map((a, i, arr) => (
                 <span key={`${track.name}-artists-${i}`}>
-                  <Link to={`/artist/${a.trim().replace(' ', '-')}`}>{a}</Link>
+                  <Link
+                    to={`/poppi-ranking/artist/${a.trim().replace(' ', '-')}`}
+                  >
+                    {a}
+                  </Link>
                   {i >= 0 && i < arr.length - 1 && ', '}
                 </span>
               ))}
