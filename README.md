@@ -1,3 +1,7 @@
+# App for ranking new songs
+
+Sort and give points to new finnish pop-tracks. Live-version here [ellamac.github.io/poppi-ranking](https://ellamac.github.io/poppi-ranking/#)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
