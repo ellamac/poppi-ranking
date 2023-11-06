@@ -22,10 +22,6 @@ import Tracklists from './components/Tracklists';
 const App = (props) => {
   const [tracks, setTracks] = useState([]);
 
-  useEffect(() => {
-    console.log('----TRACKS-----', tracks);
-  }, [tracks]);
-
   /* Gets data from Google sheets */
   useEffect(() => {
     const local = localStorage.getItem('tracks');
@@ -97,13 +93,10 @@ const App = (props) => {
               case 'PUT': {
                 let formData = await request.formData();
                 const updates = Object.fromEntries(formData);
-                console.log('ids 1', updates);
                 const ids = Object.keys(updates).map((k) => k.split('-')[1]);
-                console.log('ids 2', ids);
+
                 setTracks((prev) => {
                   const newTracks = prev.map((tr) => {
-                    const pos = updates[`position-${tr.id}`];
-                    console.log('ids 3', pos);
                     const rankings = tr.rankings
                       ? [
                           ...tr.rankings,
@@ -119,7 +112,6 @@ const App = (props) => {
                           },
                         ];
                     const wasUpdated = ids.includes(tr.id);
-                    console.log('ids 4', wasUpdated);
                     return wasUpdated
                       ? {
                           ...tr,
@@ -131,7 +123,7 @@ const App = (props) => {
                   localStorage.setItem('tracks', JSON.stringify(newTracks));
                   return newTracks;
                 });
-                return redirect('/');
+                return redirect('/poppi-ranking');
               }
               default: {
                 throw new Response('', { status: 405 });
