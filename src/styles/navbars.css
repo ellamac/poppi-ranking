@@ -1,0 +1,29 @@
+.navbar {
+  width: 100vw;
+  height: auto;
+  padding: 3rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  > .navlink {
+    box-shadow: 0 0 4px 0 lightgray;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-decoration: none;
+    font-weight: 500;
+    color: black;
+    background-color: white;
+    opacity: 1;
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+    &.active {
+      background-color: lavender;
+    }
+    &.pending {
+      opacity: 0.5;
+    }
+  }
+}

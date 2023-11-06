@@ -1,0 +1,150 @@
+@import './index.css';
+/**
+section.tracks
+├─ section.track-container
+│  ├─ p.position
+│  ├─ section.track
+│  │  ├─ img.cover
+│  │  ├─ section.info
+│  │  │  ├─ section.titles
+│  │  │  │  ├─ h2.title
+│  │  │  │  ├─ p.artist
+│  │  │  ├─ section.details
+│  │  │  │  ├─ section.detail
+│  │  │  │  │  ├─ p.header
+│  │  │  │  │  ├─ p
+│  │  │  │  ├─ section.detail
+│  │  │  │  │  ├─ p.header
+│  │  │  │  │  ├─ p
+│  │  │  │  ├─ section.detail
+│  │  │  │  │  ├─ p.header
+│  │  │  │  │  ├─ p
+*/
+.tracks {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+
+.track-container {
+  height: 8rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+.track-container p.position {
+  flex: 1 0 2rem;
+  font-size: 2rem;
+  font-weight: 900;
+  font-style: italic;
+  text-align: right;
+  padding: 0 1rem 0 0;
+  margin: auto 0;
+}
+
+.track-container .track {
+  background-color: white;
+  padding: 0.7rem;
+  border-radius: 1.4rem;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+}
+
+.track .cover {
+  height: 100%;
+  width: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 0.7rem;
+}
+
+.track .info {
+  text-align: center;
+  width: 40ch;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+}
+
+.track .info .titles {
+  > * {
+    margin: 0;
+    padding: 0;
+    font-weight: 800;
+    font-size: 1rem;
+  }
+  > .title {
+    font-style: italic;
+    font-size: 1.2rem;
+  }
+}
+
+.track .info .details {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  > .detail {
+    > * {
+      margin: 0;
+      padding: 0;
+      font-size: 0.9rem;
+      font-weight: 900;
+    }
+    > .header {
+      font-weight: 300;
+    }
+  }
+}
+
+.track .score {
+  margin: auto 0;
+  padding: 0.7rem;
+  width: 15ch;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+
+  > * {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+    font-style: italic;
+  }
+  > .header {
+    font-style: initial;
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+  > input {
+    padding: 0;
+    border: none;
+    box-shadow: 0 0 4px 0 lightgray;
+    border-radius: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+.draggable {
+  width: 100%;
+}
+
+button {
+  background-color: rgb(255, 255, 255);
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 2rem;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+}

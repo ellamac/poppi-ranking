@@ -1,0 +1,10 @@
+@import './index.css';
+
+.draggable {
+  background-color: transparent;
+  opacity: 1;
+}
+
+.draggable.isDragging {
+  opacity: 0.65;
+}
